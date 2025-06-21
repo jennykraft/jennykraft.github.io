@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Simple Dice Game | Jenny Kraft – Coding Projects, Research and Blog</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="A Simple Dice Game" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Try out the pig dice game from a JavaScript Udemy course with added multiplayer mode" />
+<meta property="og:description" content="Try out the pig dice game from a JavaScript Udemy course with added multiplayer mode" />
+<link rel="canonical" href="https://jennykraft.de/projects/pig-dice-game/" />
+<meta property="og:url" content="https://jennykraft.de/projects/pig-dice-game/" />
+<meta property="og:site_name" content="Jenny Kraft – Coding Projects, Research and Blog" />
+<meta property="og:image" content="https://jennykraft.de/assets/img/project1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://jennykraft.de/assets/img/project1.png" />
+<meta property="twitter:title" content="A Simple Dice Game" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-26T00:00:00+00:00","datePublished":"2025-05-26T00:00:00+00:00","description":"Try out the pig dice game from a JavaScript Udemy course with added multiplayer mode","headline":"A Simple Dice Game","image":"https://jennykraft.de/assets/img/project1.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jennykraft.de/projects/pig-dice-game/"},"url":"https://jennykraft.de/projects/pig-dice-game/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    <link rel="preload" as="image" href="/assets/img/hero-background.jpg" type="image/jpeg">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/lightbox.min.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Jenny Kraft",
+          "url": "https://jennykraft.de",
+          "image": "https://jennykraft.de/assets/img/profile.jpg",
+          "sameAs": [
+            "https://github.com/jennykraft",
+            "https://www.linkedin.com/in/jenny-kraft/",
+            "https://de.fiverr.com/sellers/jenny_k_/",
+            "https://jennykraft.github.io"
+          ],
+          "jobTitle": "IT Security Student",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "SAP"
+          },
+          "description": "IT Security Student at SAP, AI Enthusiast, and Lifelong Learner"
+        }
+    </script>
+
+
+    <style>
+        body {
+            padding-top: 3.8rem;
+            overflow-x: hidden;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgb(255, 255, 255);
+            z-index: -1;
+        }
+
+        /* === TOC Styling === */
+        .content>ul:first-of-type {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .content>ul:first-of-type li {
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .content>ul:first-of-type a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .content>ul:first-of-type a:hover {
+            text-decoration: underline;
+        }
+
+        .content h2 {
+            display: inline-block;
+            position: relative;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.3rem;
+            width: 100%;
+            height: 4px;
+            background-color: #007bff;
+            border-radius: 5.0px;
+        }
+
+        #backToTopBtn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .content p {
+            text-align: left;
+            line-height: 1.7;
+            color: #2d2d2d;
+            margin-bottom: 1.25rem;
+        }
+
+        .content li {
+            text-align: left;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            color: #2d2d2d;
+        }
+
+        /* TOC Floating Panel */
+        .toc-floating-panel {
+            display: none;
+            position: fixed;
+            top: 5rem;
+            right: 1rem;
+            width: 300px;
+            max-height: 70vh;
+            overflow-y: auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        /* TOC Header */
+        .toc-floating-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* TOC Toggle Button */
+        #toggleTocBtn {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+
+        /* Top-level TOC list inside floating panel */
+        #floatingTocContent>ul {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1rem;
+            list-style: none;
+            font-size: 0.95rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin: 0;
+        }
+
+        /* Nested lists: clean, indented only */
+        #floatingTocContent ul ul {
+            background: none;
+            border: none;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        #floatingTocContent ul ul li {
+            margin-bottom: 0.3rem;
+            font-size: 0.92rem;
+        }
+
+        #floatingTocContent ul a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        #floatingTocContent ul a:hover {
+            text-decoration: underline;
+        }
+
+        .homepage #toggleTocBtn {
+            display: none !important;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+
+    </style>
+
+</head>
+
+<body class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/icons/favicon.svg" alt="Logo" style="height: 30px; margin-right: 8px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/deep-research">Deep Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+    <a id="top"></a>
+    <article class="container my-5">
+
+    <h1 class="mb-3">A Simple Dice Game</h1>
+    <p class="text-muted">May 26, 2025</p>
+
+    
+    <img src="/assets/img/project1.png" alt="A Simple Dice Game" class="img-fluid mb-4 rounded shadow-sm" />
+    
+
+    <div class="content">
+        <p><a href="/demos/pig-dice-game/index.html" class="btn btn-primary">Play the Game</a></p>
+
+<ul id="markdown-toc">
+  <li><a href="#how-the-game-works" id="markdown-toc-how-the-game-works">How the Game Works</a></li>
+  <li><a href="#some-adjustments-i-made" id="markdown-toc-some-adjustments-i-made">Some Adjustments I made</a></li>
+</ul>
+
+<h2 id="how-the-game-works">How the Game Works</h2>
+<p>The Pig Dice Game is a simple push-your-luck dice game where players take turns rolling a die to score points, risking it all if they roll a 1. The fundemantals of the game were implemented in the Udemy course: https://www.udemy.com/course/the-complete-javascript-course/</p>
+
+<h2 id="some-adjustments-i-made">Some Adjustments I made</h2>
+<p>I created a game, player and dice class to practice object-oriented programming. Additionally, I added multiplayer mode to let the user choose how many players the game should have (2-10 players). To enable multiplayer mode, I needed to change the UI and game logic accordingly.</p>
+
+
+    </div>
+
+</article>
+    <a href="#top" id="backToTopBtn" class="btn btn-primary rounded-circle" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </a>
+    <!-- Floating TOC Panel -->
+    <div id="floatingTocPanel" class="toc-floating-panel">
+        <div class="toc-floating-header">
+            <strong>Contents</strong>
+            <button id="closeTocBtn" class="btn-close float-end" aria-label="Close"></button>
+        </div>
+        <nav id="floatingTocContent"></nav>
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggleTocBtn" class="btn btn-secondary rounded-circle" title="Show TOC">☰</button>
+
+
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById('backToTopBtn');
+        window.onscroll = () => {
+            btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+        };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocBtn = document.getElementById('toggleTocBtn');
+            const closeBtn = document.getElementById('closeTocBtn');
+            const floatingToc = document.getElementById('floatingTocPanel');
+            const floatingTocContent = document.getElementById('floatingTocContent');
+
+            // Grab the actual TOC list from the content (first <ul>)
+            const originalToc = document.querySelector('.content > ul:first-of-type');
+
+            if (!originalToc || originalToc.children.length === 0) {
+                // No TOC content — hide the toggle button
+                tocBtn.style.display = 'none';
+                return; // No need to proceed
+            }
+
+            if (floatingTocContent.children.length === 0) {
+                floatingTocContent.innerHTML = originalToc.outerHTML;
+            }
+
+            // Toggle open/close on button click
+            tocBtn.addEventListener('click', () => {
+                const isVisible = floatingToc.style.display === 'block';
+                floatingToc.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // Close when clicking the close (X) button
+            closeBtn.addEventListener('click', () => {
+                floatingToc.style.display = 'none';
+            });
+        });
+    </script>
+
+
+    <footer class="text-white py-4" style="background-color: #0e0f21;">
+    <div class="container text-center">
+        <small>
+            <a href="/impressum" class="text-decoration-none text-white mx-2">Impressum</a> |
+            <a href="/datenschutz" class="text-decoration-none text-white mx-2">Datenschutzerklärung</a>
+        </small>
+        <br><br>
+        <div class="mb-3">
+
+            <!-- Social Links -->
+            <a href="https://www.linkedin.com/in/jenny-kraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/linkedin-logo.png" alt="LinkedIn" style="height: 20px;">
+            </a>
+            <a href="https://github.com/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/github-logo.png" alt="GitHub" style="height: 30px;">
+            </a>
+            <a href="https://www.fiverr.com/jenny_k_" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/fiverr-logo.png" alt="Fiverr" style="height: 20px;">
+            </a>
+            <a href="https://leetcode.com/u/jennykraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/leetcode-logo.png" alt="Leetcode" style="height: 25px;">
+            </a>
+            <a href="https://tryhackme.com/p/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/tryhackme-logo.png" alt="Tryhackme" style="height: 30px;">
+            </a>
+        </div>
+
+
+        <!-- Copyright -->
+        <p class="mb-0 small">&copy; 2025 Jenny Kraft. All rights reserved.</p>
+        <!-- <img src="/assets/img/stay-curious.png" alt="Stay Curious" style="max-width: 150px; margin-top: -0.5rem;"> -->
+
+
+    </div>
+</footer>
+
+
+</body>
+
+
+</html>

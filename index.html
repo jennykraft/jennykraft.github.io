@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Jenny Kraft – Coding Projects, Research and Blog</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Jenny Kraft – Coding Projects, Research and Blog" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://jennykraft.de/" />
+<meta property="og:url" content="https://jennykraft.de/" />
+<meta property="og:site_name" content="Jenny Kraft – Coding Projects, Research and Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jenny Kraft – Coding Projects, Research and Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Jenny Kraft – Coding Projects, Research and Blog","name":"Jenny Kraft – Coding Projects, Research and Blog","url":"https://jennykraft.de/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    <link rel="preload" as="image" href="/assets/img/hero-background.jpg" type="image/jpeg">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/lightbox.min.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Jenny Kraft",
+          "url": "https://jennykraft.de",
+          "image": "https://jennykraft.de/assets/img/profile.jpg",
+          "sameAs": [
+            "https://github.com/jennykraft",
+            "https://www.linkedin.com/in/jenny-kraft/",
+            "https://de.fiverr.com/sellers/jenny_k_/",
+            "https://jennykraft.github.io"
+          ],
+          "jobTitle": "IT Security Student",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "SAP"
+          },
+          "description": "IT Security Student at SAP, AI Enthusiast, and Lifelong Learner"
+        }
+    </script>
+
+
+    <style>
+        body {
+            padding-top: 3.8rem;
+            overflow-x: hidden;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgb(255, 255, 255);
+            z-index: -1;
+        }
+
+        /* === TOC Styling === */
+        .content>ul:first-of-type {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            list-style: none;
+            font-size: 0.95rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .content>ul:first-of-type li {
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .content>ul:first-of-type a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .content>ul:first-of-type a:hover {
+            text-decoration: underline;
+        }
+
+        .content h2 {
+            display: inline-block;
+            position: relative;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.3rem;
+            width: 100%;
+            height: 4px;
+            background-color: #007bff;
+            border-radius: 5.0px;
+        }
+
+        #backToTopBtn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .content p {
+            text-align: left;
+            line-height: 1.7;
+            color: #2d2d2d;
+            margin-bottom: 1.25rem;
+        }
+
+        .content li {
+            text-align: left;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            color: #2d2d2d;
+        }
+
+        /* TOC Floating Panel */
+        .toc-floating-panel {
+            display: none;
+            position: fixed;
+            top: 5rem;
+            right: 1rem;
+            width: 300px;
+            max-height: 70vh;
+            overflow-y: auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        /* TOC Header */
+        .toc-floating-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* TOC Toggle Button */
+        #toggleTocBtn {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+
+        /* Top-level TOC list inside floating panel */
+        #floatingTocContent>ul {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 1rem;
+            list-style: none;
+            font-size: 0.95rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin: 0;
+        }
+
+        /* Nested lists: clean, indented only */
+        #floatingTocContent ul ul {
+            background: none;
+            border: none;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        #floatingTocContent ul ul li {
+            margin-bottom: 0.3rem;
+            font-size: 0.92rem;
+        }
+
+        #floatingTocContent ul a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        #floatingTocContent ul a:hover {
+            text-decoration: underline;
+        }
+
+        .homepage #toggleTocBtn {
+            display: none !important;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+
+    </style>
+
+</head>
+
+<body class="homepage">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/icons/favicon.svg" alt="Logo" style="height: 30px; margin-right: 8px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/deep-research">Deep Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+    <a id="top"></a>
+    <!-- Hero Section -->
+<section class="hero d-flex align-items-center min-vh-100 text-white"
+    style="background: url('/assets/img/hero-background.jpg') center/cover no-repeat;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 animate-slide-in-left">
+                <h1 class="display-4 fw-bold" style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);">
+                    Hi, I'm Jenny Kraft
+                </h1>
+                <p class="lead" style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);">
+                    <b>
+                        IT Security Student at SAP&nbsp;&bull;&nbsp; AI Enthusiast&nbsp;&bull;&nbsp; Lifelong Learner
+                    </b>
+                </p>
+                <nav>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/jenny-kraft/" target="_blank" rel="noopener noreferrer"
+                                class="text-white">
+                                <img src="/assets/img/linkedin-logo.png" alt="LinkedIn Logo"
+                                    style="width: 40px; margin-bottom: 20px;" />
+                                <span class="label">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/jennykraft" target="_blank" rel="noopener noreferrer"
+                                class="text-white">
+                                <img src="/assets/img/github-logo.png" alt="GitHub Logo"
+                                    style="width: 50px; margin-bottom: 20px;" />
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.fiverr.com/jenny_k_" target="_blank" rel="noopener noreferrer"
+                                class="text-white">
+                                <img src="/assets/img/fiverr-logo.png" alt="Fiverr Logo"
+                                    style="width: 90px; margin-bottom: 10px;" />
+                                <span class="label">Fiverr</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://leetcode.com/u/jennykraft/" target="_blank" rel="noopener noreferrer"
+                                class="text-white">
+                                <img src="/assets/img/leetcode-logo.png" alt="Leetcode Logo"
+                                    style="width: 40px; margin-bottom: 20px;" />
+                                <span class="label">Leetcode</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://tryhackme.com/p/jennykraft" target="_blank" rel="noopener noreferrer"
+                                class="text-white">
+                                <img src="/assets/img/tryhackme-logo.png" alt="Tryhackme Logo"
+                                    style="width: 50px; margin-bottom: 10px;" />
+                                <span class="label">Tryhackme</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Me 
+    <section id="projects" class="my-5">
+        <h2 class="mb-4 text-center">About Me</h2>
+        <p>Hi! I'm Jenny, and I'm currently pursuing a dual Bachelor's in IT Security through SAP and
+            the University of Applied Sciences in Darmstadt. I created this website to share insights
+            from ChatGPT's Deep Research, as well as projects I've completed through online programming courses. It's
+            also a great way for me to sharpen my coding skills and to share my learnings.</p>
+
+    </section> -->
+
+<section class="my-5 py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-start gy-4 gx-5">
+
+            <!-- Image Column -->
+            <div class="col-12 col-xl-5 text-center">
+                <img src="/assets/img/profile.jpg" alt="Profile Image" class="img-fluid rounded mx-auto d-block"
+                    style="width: 100%; max-width: 500px; height: 100%; object-fit: cover;">
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-12 col-xl-7">
+                <h2 class="mb-4 fw-bold text-uppercase">About Me</h2>
+
+                <p class="text-muted mb-4">
+                    Hi! I'm Jenny, and I'm currently pursuing a dual Bachelor's in IT Security through SAP and the
+                    University of Applied Sciences in Darmstadt. I created this website to share insights from
+                    ChatGPT's Deep Research, as well as projects I've completed through online programming courses.
+                    It's also a great way for me to sharpen my coding skills and share my learnings.
+                </p>
+
+                <p class="text-muted mb-4">
+                    I have been deeply fascinated by technology since early childhood, and I still am today. Back then,
+                    it was mainly Minecraft and Nintendo video games that pulled me into the world of technology.
+                    Because of that, in the eighth grade at the age of 14, I chose the elective computer science course
+                    at my school, Gymnasium Sulingen, and unknowingly laid the groundwork for my future at SAP. I learned the programming
+                    basics by developing short animated movies and video games in SNAP! and later created a movie
+                    recommendation system based on the MovieLens dataset, consisting of more than 100,000 movies.
+                </p>
+
+                <p class="text-muted mb-4">
+                    Thanks to my computer science teacher, who always motivated our course with his enthusiasm and
+                    stories from his earlier job, I kept going and later completed my A-levels in computer science with
+                    the same teacher. This teacher, by the way, could have retired some years before my A-levels, but he
+                    stayed to ensure our course received the best education possible. After some time, you realize
+                    how much influence some people have on your life and how much you can give others by doing your job
+                    with passion and sharing your knowledge. So I will always be grateful to my computer science
+                    teacher and carry forward his passion for computer science. In 2024, he traveled to Walldorf for a
+                    conference, and I had the great opportunity to show him around the SAP campus and where his
+                    influence led me.
+                </p>
+
+                <p class="text-muted mb-4">
+                    Today, I keep up with the newest technology developments, especially in the field of AI, and deep
+                    dive into computer science and IT security by gaining invaluable insights through my work at SAP and
+                    my studies at the University of Applied Sciences Darmstadt. I am driven to contribute to innovative
+                    projects at SAP and secure them from the start.
+                </p>
+
+                <!-- Optional CTA button -->
+                <!-- <div class="mt-3">
+            <a href="/about" class="btn btn-primary btn-lg px-4 shadow-sm">More About Me</a>
+          </div> -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Links Section
+<section id="resources" class="my-5 py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4 text-center fw-semibold">Link Collection</h2>
+        <p class="text-center text-muted mb-5">Valuable links across AI, cybersecurity, and other interesting domains.
+        </p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-uppercase text-primary mb-3">AI</h5>
+                
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://deepmind.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>DeepMind</strong>
+                        <p class="mb-0 text-muted small">A cutting-edge AI research lab known for major advances in deep learning, reinforcement learning, and AI for science.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://www.technologyreview.com/ai/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>MIT Tech Review AI</strong>
+                        <p class="mb-0 text-muted small">Insightful analysis and reporting from MIT on the state of artificial intelligence, covering breakthroughs, policy, and ethics.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://aiweekly.co/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>AI Weekly</strong>
+                        <p class="mb-0 text-muted small">A curated newsletter that highlights key developments in AI and machine learning each week.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>OWASP Top 10 for LLMs</strong>
+                        <p class="mb-0 text-muted small">A new OWASP initiative identifying critical risks in large language model (LLM) applications, relevant to developers and security teams.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://www.aitrends.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>AI Trends</strong>
+                        <p class="mb-0 text-muted small">Industry-focused insights and news exploring the enterprise adoption and strategic implications of AI.</p>
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase text-primary mb-3">Security</h5>
+                
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://media.ccc.de/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>Chaos Computer Club Talks</strong>
+                        <p class="mb-0 text-muted small">Talks and presentations from the Chaos Computer Club on IT security, privacy, hacking culture, and emerging technologies.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://the-morpheus.kit.com/newsletter" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>The Morpheus Newsletter</strong>
+                        <p class="mb-0 text-muted small">A sharp, insightful newsletter delivering cybersecurity news, emerging threats, and strategic perspectives.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://thehackernews.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>The Hacker News</strong>
+                        <p class="mb-0 text-muted small">Real-time updates on cybersecurity threats, data breaches, and digital defense trends for professionals.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://securityweekly.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>Security Weekly</strong>
+                        <p class="mb-0 text-muted small">Expert-led podcasts and resources covering penetration testing, compliance, enterprise defense, and more.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://owasp.org/Top10/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>OWASP Top 10</strong>
+                        <p class="mb-0 text-muted small">A foundational reference that outlines the ten most critical security risks to web applications, widely used in security education and practice.</p>
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase text-primary mb-3">Other</h5>
+                
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://media.ccc.de/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>Chaos Computer Club Talks</strong>
+                        <p class="mb-0 text-muted small">Talks and presentations from the Chaos Computer Club on IT security, privacy, hacking culture, and emerging technologies.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://the-morpheus.kit.com/newsletter" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>The Morpheus Newsletter</strong>
+                        <p class="mb-0 text-muted small">A sharp, insightful newsletter delivering cybersecurity news, emerging threats, and strategic perspectives.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://thehackernews.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>The Hacker News</strong>
+                        <p class="mb-0 text-muted small">Real-time updates on cybersecurity threats, data breaches, and digital defense trends for professionals.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://securityweekly.com/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>Security Weekly</strong>
+                        <p class="mb-0 text-muted small">Expert-led podcasts and resources covering penetration testing, compliance, enterprise defense, and more.</p>
+                    </a>
+                </div>
+                
+                <div class="mb-3 bg-white p-3 rounded shadow-sm">
+                    <a href="https://owasp.org/Top10/" target="_blank" class="text-decoration-none text-dark d-block">
+                        <strong>OWASP Top 10</strong>
+                        <p class="mb-0 text-muted small">A foundational reference that outlines the ten most critical security risks to web applications, widely used in security education and practice.</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="/links" class="btn btn-outline-primary btn-sm">View Full Link Collection</a>
+        </div>
+    </div>
+</section>  -->
+
+
+
+<!-- Projects and Blog Section -->
+<section class="my-5 py-5 bg-light">
+    <div class="container">
+        <div class="row gx-lg-5 gy-5">
+
+            <!-- Projects Section -->
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h2 class="mb-4 text-left fw-semibold">Featured Projects</h2>
+                    
+                    
+                    <hr>
+                    <div class="mb-4">
+                        <a href="/projects/pig-dice-game/" class="text-decoration-none text-dark d-flex gap-3 align-items-start">
+                            
+                            <img src="/assets/img/project1.png" alt="A Simple Dice Game" class="rounded"
+                                style="width: 140px; height: 100px; object-fit: cover;">
+                            
+                            <div>
+                                <p class="mb-0 text-muted small">May 26, 2025</p>
+                                <h5 class="mb-1">A Simple Dice Game</h5>
+                                <p class="mb-0 text-muted small">Try out the pig dice game from a JavaScript Udemy course with added multiplayer mode</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <hr>
+                    <div class="text-center mt-3">
+                        <a href="/projects" class="btn btn-outline-primary btn-sm">View All Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Section -->
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h2 class="mb-4 text-left fw-semibold">Recent Blog Posts</h2>
+                    
+                    
+                    <hr>
+                    <div class="mb-4">
+                        <a href="/blog/how-i-built-my-website/" class="text-decoration-none text-dark d-flex gap-3 align-items-start">
+                            
+                            <img src="/assets/img/how-i-built-my-website.png" alt="How I Built My Website" class="rounded"
+                                style="width: 140px; height: 100px; object-fit: cover;">
+                            
+                            <div>
+                                <p class="mb-0 text-muted small">May 28, 2025</p>
+                                <h5 class="mb-1">How I Built My Website</h5>
+                                <p class="mb-0 text-muted small">Find out how I built this website with Jekyll and GitHub Pages</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <hr>
+                    <div class="text-center mt-3">
+                        <a href="/blog" class="btn btn-outline-primary btn-sm">View All Blog Posts</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Deep Research Glassmorphic Section -->
+<section id="deep-research" class="py-5" style="
+background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 40%, rgb(232, 49, 86) 100%);">
+    <div class="container">
+        <h2 class="mb-4 text-white text-center" style="text-transform: uppercase;">Deep Research</h2>
+        <p class="text-light">Here you can find deep research results from ChatGPT where the model did a 15
+            minute research on a specific topic. The goal is to have a broad snapshot of the current state of AI
+            research and of course
+            to gain new insights into highly relevant fields like technology, health, economics. Please keep in mind
+            that AI generated content might have
+            inaccuracies.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+            
+            
+            <div class="col">
+                <a href="/deep-research/business-case-studies-part-two/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/business-case-studies.png" class="card-img-top" alt="Strategic Business Intelligence Dossier – Emerging Innovators (2020–2025) Part One"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Strategic Business Intelligence Dossier – Emerging Innovators (2020–2025) Part One</h5>
+                            <p class="card-text">A research on recent business case studies in different branches - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col">
+                <a href="/deep-research/ai-safety/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/post3/post3.jpg" class="card-img-top" alt="Beyond Technical Safety: Toward Genuine Value Integration in AI Alignment"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Beyond Technical Safety: Toward Genuine Value Integration in AI Alignment</h5>
+                            <p class="card-text">A research on recent AI Safety - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col">
+                <a href="/deep-research/artificial-general-intelligence/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/post1/post1.jpg" class="card-img-top" alt="Artificial General Intelligence: Timeline Predictions and Societal Impacts"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Artificial General Intelligence: Timeline Predictions and Societal Impacts</h5>
+                            <p class="card-text">A research on AGI - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col">
+                <a href="/deep-research/recent-advancements-in-ai/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/post2/post2.jpg" class="card-img-top" alt="Recent Advancements in AI: A Comprehensive Overview"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Recent Advancements in AI: A Comprehensive Overview</h5>
+                            <p class="card-text">A research on recent AI trends - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col">
+                <a href="/deep-research/sustainable-ai/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/sustainable-ai.png" class="card-img-top" alt="Sustainable AI: Environmental Impact and Governance"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Sustainable AI: Environmental Impact and Governance</h5>
+                            <p class="card-text">Research on Sustainable AI - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col">
+                <a href="/deep-research/business-case-studies-part-one/" class="text-decoration-none">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        
+                        <img src="/assets/img/business-case-studies.png" class="card-img-top" alt="Strategic Business Intelligence Dossier – Emerging Tech Innovators (2020–2025) Part Two"
+                            style="border-radius: 0.75rem 0.75rem 0 0;">
+                        
+                        <div class="p-3 text-white">
+                            <h5 class="card-title">Strategic Business Intelligence Dossier – Emerging Tech Innovators (2020–2025) Part Two</h5>
+                            <p class="card-text">A research on recent business case studies in tech - made with ChatGPT Deep Research</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/deep-research" class="btn btn-outline-light">See All Deep Research Results</a>
+        </div>
+    </div>
+</section>
+    <a href="#top" id="backToTopBtn" class="btn btn-primary rounded-circle" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </a>
+    <!-- Floating TOC Panel -->
+    <div id="floatingTocPanel" class="toc-floating-panel">
+        <div class="toc-floating-header">
+            <strong>Contents</strong>
+            <button id="closeTocBtn" class="btn-close float-end" aria-label="Close"></button>
+        </div>
+        <nav id="floatingTocContent"></nav>
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggleTocBtn" class="btn btn-secondary rounded-circle" title="Show TOC">☰</button>
+
+
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById('backToTopBtn');
+        window.onscroll = () => {
+            btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+        };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocBtn = document.getElementById('toggleTocBtn');
+            const closeBtn = document.getElementById('closeTocBtn');
+            const floatingToc = document.getElementById('floatingTocPanel');
+            const floatingTocContent = document.getElementById('floatingTocContent');
+
+            // Grab the actual TOC list from the content (first <ul>)
+            const originalToc = document.querySelector('.content > ul:first-of-type');
+
+            if (!originalToc || originalToc.children.length === 0) {
+                // No TOC content — hide the toggle button
+                tocBtn.style.display = 'none';
+                return; // No need to proceed
+            }
+
+            if (floatingTocContent.children.length === 0) {
+                floatingTocContent.innerHTML = originalToc.outerHTML;
+            }
+
+            // Toggle open/close on button click
+            tocBtn.addEventListener('click', () => {
+                const isVisible = floatingToc.style.display === 'block';
+                floatingToc.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // Close when clicking the close (X) button
+            closeBtn.addEventListener('click', () => {
+                floatingToc.style.display = 'none';
+            });
+        });
+    </script>
+
+
+    <footer class="text-white py-4" style="background-color: #0e0f21;">
+    <div class="container text-center">
+        <small>
+            <a href="/impressum" class="text-decoration-none text-white mx-2">Impressum</a> |
+            <a href="/datenschutz" class="text-decoration-none text-white mx-2">Datenschutzerklärung</a>
+        </small>
+        <br><br>
+        <div class="mb-3">
+
+            <!-- Social Links -->
+            <a href="https://www.linkedin.com/in/jenny-kraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/linkedin-logo.png" alt="LinkedIn" style="height: 20px;">
+            </a>
+            <a href="https://github.com/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/github-logo.png" alt="GitHub" style="height: 30px;">
+            </a>
+            <a href="https://www.fiverr.com/jenny_k_" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/fiverr-logo.png" alt="Fiverr" style="height: 20px;">
+            </a>
+            <a href="https://leetcode.com/u/jennykraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/leetcode-logo.png" alt="Leetcode" style="height: 25px;">
+            </a>
+            <a href="https://tryhackme.com/p/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/tryhackme-logo.png" alt="Tryhackme" style="height: 30px;">
+            </a>
+        </div>
+
+
+        <!-- Copyright -->
+        <p class="mb-0 small">&copy; 2025 Jenny Kraft. All rights reserved.</p>
+        <!-- <img src="/assets/img/stay-curious.png" alt="Stay Curious" style="max-width: 150px; margin-top: -0.5rem;"> -->
+
+
+    </div>
+</footer>
+
+
+</body>
+
+
+</html>
