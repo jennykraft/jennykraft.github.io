@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blog | Jenny Kraft</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A personal blog where I share my learnings in the fields of programming, AI and IT security" />
+<meta property="og:description" content="A personal blog where I share my learnings in the fields of programming, AI and IT security" />
+<link rel="canonical" href="https://jennykraft.de/blog" />
+<meta property="og:url" content="https://jennykraft.de/blog" />
+<meta property="og:site_name" content="Jenny Kraft" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A personal blog where I share my learnings in the fields of programming, AI and IT security","headline":"Blog","url":"https://jennykraft.de/blog"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Jenny Kraft" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    <link rel="preload" as="image" href="/assets/img/hero-background.jpg" type="image/jpeg">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/lightbox.min.css" rel="stylesheet">
+    <link href="/assets/aos.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Jenny Kraft",
+          "url": "https://jennykraft.de",
+          "image": "https://jennykraft.de/assets/img/profile.jpg",
+          "sameAs": [
+            "https://github.com/jennykraft",
+            "https://www.linkedin.com/in/jenny-kraft/",
+            "https://de.fiverr.com/sellers/jenny_k_/",
+            "https://jennykraft.github.io"
+          ],
+          "jobTitle": "IT Security Student",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "SAP"
+          },
+          "description": "IT Security Student at SAP, AI Enthusiast, and Lifelong Learner"
+        }
+    </script>
+
+
+    <style>
+        :root {
+            --blue: #0d6efd;
+            --text-light: #ebf0ff;
+            --text-muted: #c6d3ff;
+
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.12);
+            --hover-shadow: 0 12px 16px rgba(0, 123, 255, 0.619);
+            --focus-ring: 0 0 0 .2rem rgba(13, 110, 253, .5);
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('/assets/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('/assets/fonts/Montserrat/Montserrat-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Lobster';
+            src: url('/assets/fonts/Lobster/Lobster-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        .fancy-dark {
+            font-family: 'Lobster';
+            color: #2b2b2b;
+            font-size: clamp(35px, 5.0vw, 45px);
+
+        }
+
+        .fancy-light {
+            font-family: 'Lobster';
+            color: #ffffff;
+            font-size: clamp(35px, 5.0vw, 45px);
+
+        }
+
+        .fancy-light-hero {
+            font-family: 'Lobster';
+            color: #ffffff;
+            font-size: clamp(70px, 10.0vw, 90px);
+
+        }
+
+        .fancy-light-big {
+            font-family: 'Lobster';
+            color: #ffffff;
+            font-size: clamp(50px, 5.0vw, 65px);
+
+        }
+
+        .fancy-dark-big {
+            font-family: 'Lobster';
+            color: #2b2b2b;
+            font-size: clamp(50px, 5.0vw, 65px);
+
+        }
+
+        html,
+        body {
+            font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Montserrat';
+            font-size: clamp(35px, 8.0vw, 50px);
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: clamp(18px, 2.0vw, 20px);
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: clamp(18px, 2.0vw, 20px);
+        }
+
+        body {
+            padding-top: 3.8rem;
+            overflow-x: hidden;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #fff;
+            z-index: -1;
+        }
+
+        .content>ul:first-of-type {
+            background: #f8f9fa;
+            border-left: 4px solid var(--blue);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            list-style: none;
+            font-size: .95rem;
+            border-radius: .5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+        }
+
+        .content>ul:first-of-type li {
+            margin: .5rem 0 0 1rem;
+        }
+
+        .content>ul:first-of-type a {
+            color: var(--blue);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .content>ul:first-of-type a:hover {
+            text-decoration: underline;
+        }
+
+        .content h2 {
+            display: inline-block;
+            position: relative;
+            margin: 2rem 0 1rem;
+            color: #1a1a1a;
+        }
+
+        #backToTopBtn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+        }
+
+        .toc-floating-panel {
+            display: none;
+            position: fixed;
+            top: 5rem;
+            right: 1rem;
+            z-index: 1000;
+            width: 320px;
+            max-height: 70vh;
+            overflow-y: auto;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 1px solid #eaeaea;
+        }
+
+        .toc-floating-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0.5rem;
+        }
+
+        .toc-floating-header strong {
+            font-size: 1.2rem;
+            color: #333333;
+        }
+
+        #floatingTocContent ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #floatingTocContent ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        #floatingTocContent ul a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0;
+            transition: border 0.3s, color 0.3s;
+        }
+
+        #floatingTocContent ul a:hover {
+            border-left: 3px solid #0d6efd;
+            color: #0056b3;
+            background-color: transparent;
+        }
+
+        #floatingTocContent ul ul {
+            margin-left: 1rem;
+            border-left: 2px solid #eaeaea;
+            padding-left: 1rem;
+        }
+
+        #floatingTocContent ul ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        #toggleTocBtn {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            background: #0d6efd;
+            color: #ffffff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #toggleTocBtn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #toggleTocBtn:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.5);
+        }
+
+        .toc-floating-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .toc-floating-panel::-webkit-scrollbar-thumb {
+            background: #cccccc;
+            border-radius: 4px;
+        }
+
+        .toc-floating-panel::-webkit-scrollbar-thumb:hover {
+            background: #aaaaaa;
+        }
+
+        .homepage #toggleTocBtn {
+            display: none !important;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: .75rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .20);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .35);
+        }
+
+        .glass-preview {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform .28s, box-shadow .28s;
+        }
+
+        .glass-preview:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .glass-preview strong {
+            color: var(--text-light);
+        }
+
+        .glass-preview p {
+            color: var(--text-muted);
+        }
+
+        .btn-glass,
+        .category-btn,
+        .page-link {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-light);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform .28s, box-shadow .28s;
+        }
+
+        .btn-glass:hover,
+        .category-btn:hover,
+        .page-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--hover-shadow);
+            color: #fff;
+        }
+
+        .category-btn.active,
+        .page-item.active .page-link {
+            background: var(--blue) !important;
+            border-color: var(--blue) !important;
+            color: #fff !important;
+            box-shadow: none;
+        }
+
+        .page-link:focus,
+        .btn-glass:focus,
+        .category-btn:focus {
+            box-shadow: var(--focus-ring);
+        }
+
+        .links-gradient-bg {
+            background: rgba(63, 94, 251, 1);
+            color-scheme: dark;
+        }
+
+        .glass-card:hover {
+            box-shadow: var(--hover-shadow) !important;
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        .card-title {
+            color: rgba(255, 255, 255, 1);
+            font-weight: 700;
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .pinned-badge {
+            background: var(--bg-glass);
+            color: var(--text-light);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(4px);
+            padding: 0.25rem 0.6rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            box-shadow: var(--hover-shadow);
+            z-index: 10;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+        }
+
+        .pinned-badge::before {
+            content: "📌";
+            font-size: 0.85rem;
+        }
+    </style>
+
+</head>
+
+<body class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/icons/favicon.svg" alt="Logo" style="height: 30px; margin-right: 8px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="/deep-research">Deep Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/links">Links</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About Me</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+    <a id="top"></a>
+    <main class="container my-5">
+    <h1 class="mb-4 fancy-dark-big">Blog</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        
+        
+        <div class="col">
+            <a href="/blog/how-to-generate-alarms-for-calendar-entries/" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-sm">
+                    
+                    <img src="/assets/img/shortcut-post/thumbnail.png" class="card-img-top" alt="How to Generate Alarms for Calendar Entries on the iPhone">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(28, 28, 28)">How to Generate Alarms for Calendar Entries on the iPhone</h5>
+                        <p class="card-text" style="color: rgb(28, 28, 28);">Find out how to automatically generate alarms for calendar entries on iOS</p>
+                        <p class="text-muted small">November 2, 2025</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col">
+            <a href="/blog/how-i-built-my-website/" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-sm">
+                    
+                    <img src="/assets/img/how-i-built-my-website.png" class="card-img-top" alt="How I Built My Website">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: rgb(28, 28, 28)">How I Built My Website</h5>
+                        <p class="card-text" style="color: rgb(28, 28, 28);">Find out how I built this website with Jekyll and GitHub Pages</p>
+                        <p class="text-muted small">May 28, 2025</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+</main>
+    <a href="#top" id="backToTopBtn" class="btn btn-primary rounded-circle" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </a>
+    <!-- Floating TOC Panel -->
+    <div id="floatingTocPanel" class="toc-floating-panel">
+        <div class="toc-floating-header">
+            <strong>Table of Contents</strong>
+            <button id="closeTocBtn" class="btn-close float-end" aria-label="Close"></button>
+        </div>
+        <nav id="floatingTocContent"></nav>
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggleTocBtn" class="btn btn-secondary rounded-circle" title="Show TOC">☰</button>
+
+
+
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btn = document.getElementById('backToTopBtn');
+        window.onscroll = () => {
+            btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+        };
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tocBtn = document.getElementById('toggleTocBtn');
+            const closeBtn = document.getElementById('closeTocBtn');
+            const floatingToc = document.getElementById('floatingTocPanel');
+            const floatingTocContent = document.getElementById('floatingTocContent');
+
+            // Grab the actual TOC list from the content (first <ul>)
+            const originalToc = document.querySelector('.content > ul:first-of-type');
+
+            if (!originalToc || originalToc.children.length === 0) {
+                // No TOC content — hide the toggle button
+                tocBtn.style.display = 'none';
+                return; // No need to proceed
+            }
+
+            if (floatingTocContent.children.length === 0) {
+                floatingTocContent.innerHTML = originalToc.outerHTML;
+            }
+
+            // Toggle open/close on button click
+            tocBtn.addEventListener('click', () => {
+                const isVisible = floatingToc.style.display === 'block';
+                floatingToc.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // Close when clicking the close (X) button
+            closeBtn.addEventListener('click', () => {
+                floatingToc.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script src="/assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+
+
+    <footer class="text-white py-4" style="background-color: #0e0f21;">
+    <div class="container text-center">
+        <small>
+            <a href="/impressum" class="text-decoration-none text-white mx-2">Impressum</a> |
+            <a href="/datenschutz" class="text-decoration-none text-white mx-2">Datenschutzerklärung</a>
+        </small>
+        <br><br>
+        <div class="mb-3">
+
+            <!-- Social Links -->
+            <a href="https://www.linkedin.com/in/jenny-kraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/linkedin-logo.png" alt="LinkedIn" style="height: 20px;">
+            </a>
+            <a href="https://github.com/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/github-logo.png" alt="GitHub" style="height: 30px;">
+            </a>
+            <a href="https://www.fiverr.com/jenny_k_" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/fiverr-logo.png" alt="Fiverr" style="height: 20px;">
+            </a>
+            <a href="https://leetcode.com/u/jennykraft/" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/leetcode-logo.png" alt="Leetcode" style="height: 25px;">
+            </a>
+            <a href="https://tryhackme.com/p/jennykraft" target="_blank" class="text-white mx-2">
+                <img src="/assets/img/tryhackme-logo.png" alt="Tryhackme" style="height: 30px;">
+            </a>
+        </div>
+
+
+        <!-- Copyright -->
+        <p class="mb-0 small">&copy; 2025 Jenny Kraft. All rights reserved.</p>
+        <!-- <img src="/assets/img/stay-curious.png" alt="Stay Curious" style="max-width: 150px; margin-top: -0.5rem;"> -->
+
+
+    </div>
+</footer>
+
+
+</body>
+
+
+</html>
