@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1224" />
+  <title>Pig Dice Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="app__header">
+      <p class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        pig.dice
+      </p>
+      <p class="tagline">First to <span class="tagline__num">100</span> wins. Roll a 1 and lose your turn.</p>
+    </header>
+
+    <section class="board">
+
+      <!-- Active player card -->
+      <article id="active-player-panel" class="player player--active">
+        <header class="player__head">
+          <p class="player__label">now playing</p>
+          <h2 class="player__name" id="name--0">Player-1</h2>
+        </header>
+
+        <p class="player__score" id="score--0">0</p>
+
+        <div class="dice-stage">
+          <img src="dice-1.png" alt="Playing dice" class="dice hidden" />
+        </div>
+
+        <div class="current">
+          <p class="current__label">current</p>
+          <p class="current__score" id="current--0">0</p>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--roll" type="button">
+            <span class="btn__icon" aria-hidden="true">⚀</span> Roll dice
+          </button>
+          <button class="btn btn--ghost btn--hold" type="button">
+            <span class="btn__icon" aria-hidden="true">▤</span> Hold
+          </button>
+        </div>
+      </article>
+
+      <!-- Side panel: setup + other players -->
+      <aside class="side">
+        <section class="card setup">
+          <h3 class="card__title">New game</h3>
+          <label class="field" for="player-count">
+            <span class="field__label">Players</span>
+            <select id="player-count">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </label>
+          <button class="btn btn--ghost btn--new" type="button">
+            <span class="btn__icon" aria-hidden="true">↻</span> New game
+          </button>
+        </section>
+
+        <section class="card others">
+          <h3 class="card__title">Standings</h3>
+          <ul id="other-players" class="player-list"></ul>
+        </section>
+      </aside>
+
+    </section>
+
+    <footer class="app__footer">
+      <a href="../../projects/pig-dice-game/" class="back-link">← back to project</a>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
